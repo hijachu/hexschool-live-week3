@@ -13,6 +13,10 @@ img {
     box-sizing: border-box;
 }
 
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft JhengHei", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
 .container {
     max-width: 1000px;
     padding-right: 15px;
@@ -21,3 +25,66 @@ img {
 }
 
 /* CSS Reset end */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+    margin-bottom: 24px;
+}
+
+@media(max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.logo a {
+    display: block;
+    width: 250px;
+    height: 250px;
+    background: url(../images/M1.png);
+    /* 圖片取代文字技巧 */
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        margin-bottom: 20px;
+        width: 150px;
+    }
+
+    .logo a {
+        width: 150px;
+        height: 150px;
+        background: url(../images/M2.png) no-repeat
+    }
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu li a {
+    background: #3399FF;
+    color: #fff;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
+
+.menu li a:hover {
+    background: orange;
+}
+
+@media(max-width: 768px) {
+    .menu li {
+        width: 50%;
+        margin: 0 auto 10px auto;
+    }
+}
