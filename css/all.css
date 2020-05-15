@@ -24,7 +24,7 @@ body {
 header {
     background: #AA0601;
     height: 108px;
-    padding: 0 5%;
+    padding: 0 88px;
 
     display: flex;
     justify-content: space-between;
@@ -42,22 +42,21 @@ header {
     white-space: nowrap;
     overflow: hidden;
 
-    color: #fff;
+    color: #FFFFFF;
 }
 
 .menu {
     display: flex;
 
     /* 80*2 + 332 */
-    width: 492px;
+    width: 100%;
     max-width: 492px;
-
 
     justify-content: space-between;
 }
 
 .menu li a {
-    color: #fff;
+    color: #FFFFFF;
     font-size: 20px;
     line-height: 30px;
 
@@ -77,13 +76,13 @@ header {
     left: 16px;
 
     width: 24px;
-    color: #fff;
+    color: #FFFFFF;
 }
 
 /* RWD: Pad */
 @media(max-width: 992px) {
     header {
-        padding: 0 6.25%;
+        padding: 0 48px;
     }
 
     .menu {
@@ -98,8 +97,9 @@ header {
         height: 50px;
 
         position: relative;
+
         justify-content: center;
-        padding: 10px 0;
+        /* padding: 10px 0; */
         align-items: center;
         flex-direction: column;
     }
@@ -107,19 +107,20 @@ header {
     .logo a {
         width: 48px;
         height: 30px;
-        background: url(../images/M2.png);
+        background: url(../img/logo-mobile.png);
     }
 
     .btn-hamburger {
         display: block;
     }
 
-
     .menu {
         max-height: 0px;
+
         position: absolute;
         left: 0;
         top: 50px;
+
         width: 100%;
         max-width: 100%;
 
@@ -138,11 +139,11 @@ header {
 
     .menu li {
         display: block;
-        background: #aa0601;
-        color: #ffffff;
-        border-top: 1px solid #ffffff;
+        background: #AA0601;
+        color: #FFFFFF;
+        border-top: 1px solid #FFFFFF;
         padding: 16px 0;
-        z-index: 120;
+        z-index: 1;
     }
 
     .menu li:hover {
