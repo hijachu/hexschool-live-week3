@@ -197,7 +197,7 @@ Cover Page
     height: 90px;
 }
 
-/* RWD: Pad */
+/* pad */
 @media (max-width: 992px) {
     .container {
         max-width: 672px;
@@ -218,7 +218,7 @@ Cover Page
     }
 }
 
-/* RWD: mobile */
+/* mobile */
 @media (max-width: 767px) {
     .cover-page {
         background-image: url(../img/banner-mobile.png);
@@ -249,7 +249,8 @@ Cover Page
 }
 
 /****************
-* Feature
+* Features
+* 專業是有價的
 ******************/
 .feature {
     padding-top: 64px;
@@ -338,14 +339,14 @@ Cover Page
 
 /* 卡片內容排版 */
 .card {
-    /*pb 為0, 底下paragraph 直接碰到card 最底部 */
+    /* pb 為0, 底下 paragraph 直接碰在 card 最底部 */
     padding: 16px 37px 0;
 
     flex-direction: column;
     /* 預設由上往下排排，但內容皆水平置中 */
     align-items: center;
 
-    /*amazing, 這樣每張圖左右間隔 206px */
+    /* 這樣每張圖左右間隔 206px 和桌機版 XD稿 一樣*/
     width: 23.5%;
 }
 
@@ -380,7 +381,6 @@ Cover Page
     margin-bottom: 40px;
 }
 
-
 /* pad */
 /* mobile: the same as pad */
 @media (max-width: 992px) {
@@ -405,7 +405,7 @@ Cover Page
     }
 }
 
-
+/* 卡片內文靠左對齊 */
 .card p {
     text-align: left;
 }
@@ -426,5 +426,248 @@ Cover Page
 
     .order-about {
         order: 4;
+    }
+}
+
+/**************
+Classic series
+經典系列鏡框
+******************/
+.classic {
+    padding: 64px 0 80px;
+}
+
+.classic h2 {
+    font-weight: 600;
+
+    font-size: 48px;
+    line-height: 1.5em;
+
+    color: #650300;
+
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* 圖片與文字排版 */
+.classic ul li {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 32px;
+}
+
+.classic ul li:nth-child(2) {
+    flex-direction: row-reverse;
+}
+
+.classic ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* 經典系列鏡框 圖片容器 */
+.classic .series .img-wrap {
+    width: 792px;
+    height: 320px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    margin-right: 24px;
+}
+
+.classic .sunglasses .img-wrap {
+    margin-left: 24px;
+    margin-right: 0;
+}
+
+.optical .img-wrap {
+    background-image: url(../img/product-1.png);
+}
+
+.sunglasses .img-wrap {
+    background-image: url(../img/product-2.png);
+}
+
+.functional .img-wrap {
+    background-image: url(../img/product-3.png);
+}
+
+.series .product-name {
+    display: flex;
+}
+
+.classic .icon-wrap {
+    width: 48px;
+
+    margin-right: 8px;
+
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* diamond icon*/
+.optical .icon-wrap {
+    background-image: url(../img/icon-diamond.svg);
+}
+
+/* sun icon */
+.sunglasses .icon-wrap {
+    background-image: url(../img/icon-sun.svg);
+}
+
+/* thunder icon */
+.functional .icon-wrap {
+    background-image: url(../img/icon-thunder.svg);
+}
+
+.classic p {
+    font-weight: 900;
+
+    font-size: 48px;
+    line-height: 1.5em;
+
+    font-style: italic;
+    color: #AA0601;
+}
+
+/* pad */
+@media (max-width: 992px) {
+    .classic {
+        padding: 40px 0 40px;
+    }
+
+    .container {
+        max-width: 672px;
+    }
+
+    .classic h2 {
+        font-size: 32px;
+        line-height: 1.5em;
+
+        margin-bottom: 32px;
+    }
+
+    .classic ul li {
+        /* justify-content: space-between; */
+        justify-content: start;
+    }
+
+    /* 圖片與文字排版 */
+    .classic ul li:nth-child(2) {
+        flex-direction: row;
+    }
+
+    /* 經典系列鏡框 圖片容器 */
+    .classic .series .img-wrap {
+        max-width: 410px;
+        height: 168px;
+
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        margin-right: 24px;
+    }
+
+    /* 重置(reset) sunglassess 排版 */
+    .classic .sunglasses .img-wrap {
+        margin-left: 0;
+    }
+
+
+    .classic .product-name {
+        /* 63 * 3 + 24 *2 */
+        /* max-width: 237px; */
+
+        /* icon 與 文字 就置中了 why?? */
+        width: 45%;
+
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    .classic .icon-wrap {
+        max-width: 32px;
+    }
+
+    .classic p {
+        font-weight: 900;
+
+        font-size: 28px;
+        line-height: 1.5em;
+
+        text-align: center;
+
+        font-style: italic;
+        color: #AA0601;
+    }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+    .classic {
+        padding: 24px 0 24px 0;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 16px;
+    }
+
+    .classic-photo {
+        display: none;
+    }
+
+    .classic-optical {
+        background-image: url(https://i.ibb.co/PTWrkhd/product-1.png);
+    }
+
+    .classic-sunglasses {
+        background-image: url(https://i.ibb.co/HFgyzRF/product-2.png);
+    }
+
+    .classic-functional {
+        background-image: url(https://i.ibb.co/9H6M8vJ/product-3.png);
+    }
+
+    .classic-m {
+        height: 134px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    .classic-optical,
+    .classic-functional {
+        justify-content: center;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .classic-sunglasses {
+        justify-content: center;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+
+    .product-name {
+        width: 100%;
+    }
+
+    .classic-text {
+        color: #FFFFFF;
+    }
+
+    .diamond {
+        background-image: url(https://svgshare.com/i/KXf.svg);
+    }
+
+    .sun {
+        background-image: url(https://svgshare.com/i/KZD.svg);
+    }
+
+    .thunder {
+        background-image: url(https://svgshare.com/i/KYY.svg);
     }
 }
