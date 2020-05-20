@@ -895,12 +895,18 @@ Classic series
 
 /*mobile*/
 @media (max-width: 767px) {
+
+    .contact-inner {
+        width: 95%;
+    }
+
     .contact-inner p:first-of-type {
         font-size: 1rem;
     }
 
-    .contact-form-group input,
-    .contact-form-group textarea {
+    .contact .form-group input,
+    .contact .form-group textarea {
         padding: 7px 12px;
     }
 }
+
