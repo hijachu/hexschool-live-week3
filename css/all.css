@@ -688,7 +688,9 @@ Classic series
 
     text-align: center;
     /* pb60 */
-    margin-bottom: 3.75em;
+    /* 這是bug 嗎? 用 3.75em 會變成 180px */
+    /* margin-bottom: 3.75em; */
+    margin-bottom: 60px;
 }
 
 .recommend-list {
@@ -774,5 +776,131 @@ Classic series
         width: 100%;
         height: 256px;
         object-fit: cover;
+    }
+}
+
+/***************************************
+*  contact
+ **********************************/
+.contact {
+    background-color: #AA06010D;
+    padding-top: 4em;
+    padding-bottom: 5.75em;
+}
+
+.contact .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-inner {
+    /* 792/ 1200 = 66% */
+    width: 66%;
+}
+
+.contact h2 {
+    text-align: center;
+
+    font-size: 3em;
+
+    /* line-height: 4.5em; */
+    line-height: 72px;
+
+    /* margin-bottom: 1.5em; */
+    margin-bottom: 24px;
+}
+
+.contact-inner p:first-of-type {
+    font-size: 1.25rem;
+    line-height: 30px;
+
+    /* margin-bottom: 1.25rem; */
+    margin-bottom: 20px;
+}
+
+.contact .form-group {
+    margin-bottom: 1rem;
+}
+
+.contact .form-group label {
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.5em;
+
+    margin-bottom: 4px;
+}
+
+.contact .form-group input,
+.contact .form-group textarea {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #000000;
+    padding: 1rem;
+    outline: 0;
+}
+
+/* 參考助教做法 可以讓checkbox 和後面的文字對齊 baseline */
+.contact-form .checkbox-description {
+    display: flex;
+
+    align-items: baseline;
+}
+
+.contact-form .checkbox-description p {
+    /*  42 -16*/
+    margin-bottom: 26px;
+}
+
+.contact .form-group input[type=checkbox] {
+    width: auto;
+    margin-right: 0.25rem;
+}
+
+.contact .form-group input::placeholder,
+.contact .form-group textarea::placeholder {
+    color: black;
+    opacity: .2;
+}
+
+/* 確認送出 按鈕水平置中 */
+.contact-form .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form .btn {
+    background-color: #AA0601;
+    color: white;
+    width: 180px;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.5em;
+
+    padding: 1rem;
+    display: block;
+
+    text-align: center;
+    text-decoration: none;
+}
+
+.contact-form .btn:hover {
+    background-color: #650300;
+}
+
+/* pad 和 desktop 排版一致，使用百分比做RWD */
+
+/*mobile*/
+@media (max-width: 767px) {
+    .contact-inner p:first-of-type {
+        font-size: 1rem;
+    }
+
+    .contact-form-group input,
+    .contact-form-group textarea {
+        padding: 7px 12px;
     }
 }
